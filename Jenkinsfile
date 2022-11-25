@@ -1,11 +1,6 @@
 def app
 pipeline {
- agent {
-         docker {
-             image 'node:lts-bullseye-slim'
-             args '-p 3000:3000'
-         }
-     }
+  agent any
   environment {
       AWS_ACCOUNT_ID="337901474843"
       AWS_DEFAULT_REGION="us-east-1"
@@ -28,16 +23,7 @@ pipeline {
         }
     }
 
-    stage ('install') {
-      steps {
-        sh 'npm install'
-      }
-    }
-    stage ('build') {
-      steps {
-        sh 'npm run build'
-      }
-    }
+
 
    stage('Docker Build') {
       steps {

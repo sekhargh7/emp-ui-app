@@ -1,4 +1,4 @@
-# HrUiApp
+# emp-ui-app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
@@ -32,8 +32,15 @@ https://jmrobles.medium.com/mastering-angular-proxy-configuration-6c8df0b175fe
 ## dockerizing
 https://www.indellient.com/blog/how-to-dockerize-an-angular-application-with-nginx/
 
+https://javascript.plainenglish.io/how-to-dockerize-angular-application-3cd67e963832
+
 ## dockerizing with environment variables
 https://pumpingco.de/blog/environment-variables-angular-docker/
 
 ## reading environment variable
 https://zetcode.com/javascript/dotenv/
+
+## diffentec between command and entry point
+https://awstip.com/docker-run-vs-cmd-vs-entrypoint-78ca2e5472bd
+
+https://shisho.dev/blog/posts/docker-cmd-entrypoint/

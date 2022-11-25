@@ -44,3 +44,13 @@ https://zetcode.com/javascript/dotenv/
 https://awstip.com/docker-run-vs-cmd-vs-entrypoint-78ca2e5472bd
 
 https://shisho.dev/blog/posts/docker-cmd-entrypoint/
+
+## getaddrinfo EAI_AGAIN registry.npmjs.org for fixing the issue
+Simple fix is to create the file /etc/docker/daemon.json
+and insert:
+{
+"dns": ["10.0.0.2", "8.8.8.8"]
+}
+https://github.com/StefanScherer/dockerfiles-windows/issues/270
+and restart the system
+###############################################

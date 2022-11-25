@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 
 //set empMgmtApiUrl=http://localhost:8081/emp
 

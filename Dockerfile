@@ -4,6 +4,8 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY . /app
 
+RUN pwd
+RUN ls -l
 
 #RUN npm install -g @angular/cli
 #COPY package.json /app

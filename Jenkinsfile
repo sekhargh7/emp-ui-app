@@ -1,6 +1,11 @@
 def app
 pipeline {
-  agent any
+ agent {
+         docker {
+             image 'node:lts-bullseye-slim'
+             args '-p 3000:3000'
+         }
+     }
   environment {
       AWS_ACCOUNT_ID="337901474843"
       AWS_DEFAULT_REGION="us-east-1"

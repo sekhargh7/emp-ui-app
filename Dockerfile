@@ -13,8 +13,8 @@ RUN npm run build --prod
 
 
 ## stage 2
-FROM nginx:1.20.1
-COPY --from=build-step /app/dist/emp-ui-app /usr/share/nginx/html
+FROM nginx:1.13.12-alpine
+COPY --from=node /app/dist/emp-ui-app /usr/share/nginx/html
 EXPOSE 80
 
 #EXPOSE 4200 49153

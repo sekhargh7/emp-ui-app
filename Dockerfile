@@ -7,7 +7,8 @@ COPY . /app
 RUN pwd
 RUN ls -l
 
-RUN npm install --loglevel verbose
+#RUN npm install --loglevel verbose
+RUN npm install
 
 RUN npm run build --prod
 

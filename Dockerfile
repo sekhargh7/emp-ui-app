@@ -15,7 +15,8 @@ RUN npm run build --prod
 ## stage 2
 FROM nginx:1.13.12-alpine
 COPY --from=build-step /app/dist/emp-ui-app /usr/share/nginx/html
-COPY default.conf /etc/nginx/conf.d/default.conf
+#COPY default.conf /etc/nginx/conf.d/default.conf
+COPY backend-proxy.conf.template /etc/nginx/conf.d/backend-proxy.conf.template
 EXPOSE 80
 
 #EXPOSE 4200 49153

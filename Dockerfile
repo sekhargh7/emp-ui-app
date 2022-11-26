@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14-alpine as build-step
 RUN mkdir -p /app
 
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN npm run build --prod
 
 ## stage 2
 FROM nginx:1.13.12-alpine
-COPY --from=node /app/dist/emp-ui-app /usr/share/nginx/html
+COPY --from=build-step /app/dist/emp-ui-app /usr/share/nginx/html
 EXPOSE 80
 
 #EXPOSE 4200 49153

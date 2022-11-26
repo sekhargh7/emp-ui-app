@@ -1,4 +1,3 @@
-def app
 pipeline {
   agent any
   environment {
@@ -28,7 +27,8 @@ pipeline {
    stage('Docker Build') {
       steps {
       	script{
-      	 app = docker.build("${IMAGE_REPO_NAME}:${IMAGE_TAG}")
+//      	 app = docker.build("${IMAGE_REPO_NAME}:${IMAGE_TAG}")
+      	  sh "docker build -t ${IMAGE_REPO_NAME}:${IMAGE_TAG} ."
       	}
       }
     }

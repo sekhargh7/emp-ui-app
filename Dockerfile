@@ -14,12 +14,11 @@ RUN npm run build --prod
 
 
 ## stage 2
-FROM nginx:1.13.12-alpine
+FROM nginx:1.22.1-alpine
 COPY --from=build-step /app/dist/emp-ui-app /usr/share/nginx/html
-COPY default.conf /etc/nginx/conf.d/default.conf
-COPY backend-proxy.conf.template /etc/nginx/conf.d/backend-proxy.conf.template
-#CMD ["envsubst", " < /etc/nginx/conf.d/backend-proxy.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
-#ENTRYPOINT /bin/bash -c "envsubst < /etc/nginx/conf.d/backend-proxy.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+
+COPY default.conf.template /etc/nginx/templates/default.conf.template
+
 EXPOSE 80
 
 

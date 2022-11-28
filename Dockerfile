@@ -4,10 +4,11 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY . /app
 
-RUN pwd
-RUN ls -l
+#RUN pwd
+#RUN ls -l
 
-RUN npm install --loglevel verbose
+#RUN npm install --loglevel verbose
+RUN npm install
 
 RUN npm run build --prod
 

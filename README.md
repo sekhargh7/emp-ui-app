@@ -54,3 +54,6 @@ and insert:
 https://github.com/StefanScherer/dockerfiles-windows/issues/270
 and restart the system
 ###############################################
+
+## docker interactive commands
+https://www.digitalocean.com/community/tutorials/how-to-use-docker-exec-to-run-commands-in-a-docker-container
